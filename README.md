@@ -27,5 +27,5 @@ python main.py
 |  Read    | GET   | /api/retorna_metricas |  - |
 |  Create  | POST  | /api/calcula_metricas | {"serial":"","datahora_inicio":"" "datahora_fim":""} |
 
-
+**Feito com :heart: por Ana Paula Araujo**
 

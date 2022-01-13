@@ -56,9 +56,11 @@ class CalcHandler(RequestHandler):
 
         #Consulting database using db_consult function
         data = db_consult(serial, datahora_inicio, datahora_fim)
+
+        #validating data
         if (len(data)==0):
             self.set_status(200)
-            self.write('Serial nao possui dados para esse intervalo de tempo')
+            self.write('Serial informed does not have data for this time interval')
             return None
 
         #Transforming data into dataframe and sorting by datetime 

@@ -47,7 +47,6 @@ def calculate_metrics(df):
             if (situation1=='true' and situation2=='false'):
                 paradas+=1
 
-
             #Calculation of time in motion and time stopped
             data1 = int(row['datahora'])
             data2 = int(df.iloc[index - 1]['datahora'])
@@ -56,7 +55,8 @@ def calculate_metrics(df):
                 tempo_parado += (data1 - data2)
             else:
                 tempo_movimento += (data1 - data2)
-    
+                
+    #Condition for if the  time interval informed does not have any stops
     if paradas == 0:
         paradas = 1
 
